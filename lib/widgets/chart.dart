@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import './chart_bar.dart';
-import '../models/transaction.dart';
+import 'package:personal_expenses/models/transaction.dart';
+import 'package:personal_expenses/widgets/chart_bar.dart';
 
 class Chart extends StatelessWidget {
   final List<Transaction> recentTransactions;
@@ -51,7 +51,7 @@ class Chart extends StatelessWidget {
               fit: FlexFit.tight,
               child: ChartBar(
                 data['day'].toString(),
-                data['amount']as double,
+                data['amount'] as double,
                 totalSpending == 0.0
                     ? 0.0
                     : (data['amount'] as double) / totalSpending,
